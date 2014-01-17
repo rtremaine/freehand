@@ -10,5 +10,12 @@
 
 @interface SettingsViewController : UIViewController
 - (IBAction)closeSettings:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *brushControl;
+@property (weak, nonatomic) IBOutlet UIImageView *brushPreview;
+@property (weak, nonatomic) IBOutlet UISlider *brushValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *opacityControl;
+@property (weak, nonatomic) IBOutlet UIImageView *opacityPreview;
+@property (weak, nonatomic) IBOutlet UISlider *opacityValueLabel;
+- (IBAction)sliderChanged:(id)sender;
 
 @end

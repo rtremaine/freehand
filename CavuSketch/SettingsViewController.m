@@ -38,4 +38,6 @@
 - (IBAction)closeSettings:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)sliderChanged:(id)sender {
+}
 @end
