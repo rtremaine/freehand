@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SettingsViewControllerDelegate <NSObject>
+- (void)closeSettings:(id)sender;
+@end
+
 @interface SettingsViewController : UIViewController
+@property (nonatomic, weak) id<SettingsViewControllerDelegate> delegate;
 - (IBAction)closeSettings:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *brushControl;
 @property (weak, nonatomic) IBOutlet UIImageView *brushPreview;
