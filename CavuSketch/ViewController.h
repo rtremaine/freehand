@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController  {
     CGPoint lastPoint;
     CGFloat red;
     CGFloat green;
@@ -22,5 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
 - (IBAction)pencilPressed:(id)sender;
 - (IBAction)eraserPressed:(id)sender;
+- (IBAction)save:(id)sender;
+- (IBAction)reset:(id)sender;
+- (IBAction)settings:(id)sender;
 
 @end

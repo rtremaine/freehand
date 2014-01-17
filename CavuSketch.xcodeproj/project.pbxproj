@@ -25,6 +25,7 @@
 		D17BAF7918899ABB00108BD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF7718899ABB00108BD8 /* InfoPlist.strings */; };
 		D17BAF7C18899ABB00108BD8 /* CavuSketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */; };
 		D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF851889A78700108BD8 /* Twitter.framework */; };
+		D1A5CACE1889B8870072A08E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A5CACD1889B8870072A08E /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		D17BAF7A18899ABB00108BD8 /* CavuSketchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CavuSketchTests.h; sourceTree = "<group>"; };
 		D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CavuSketchTests.m; sourceTree = "<group>"; };
 		D17BAF851889A78700108BD8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		D1A5CACC1889B8870072A08E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D1A5CACD1889B8870072A08E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				D17BAF6518899ABA00108BD8 /* ViewController.h */,
 				D17BAF6618899ABA00108BD8 /* ViewController.m */,
 				D17BAF4E18899ABA00108BD8 /* Supporting Files */,
+				D1A5CACC1889B8870072A08E /* SettingsViewController.h */,
+				D1A5CACD1889B8870072A08E /* SettingsViewController.m */,
 			);
 			path = CavuSketch;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				D17BAF5418899ABA00108BD8 /* main.m in Sources */,
 				D17BAF5818899ABA00108BD8 /* AppDelegate.m in Sources */,
 				D17BAF6718899ABA00108BD8 /* ViewController.m in Sources */,
+				D1A5CACE1889B8870072A08E /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +477,7 @@
 				D17BAF8118899ABB00108BD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketchTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +486,7 @@
 				D17BAF8418899ABB00108BD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

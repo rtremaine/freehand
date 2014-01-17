@@ -97,6 +97,29 @@
     opacity = 1.0;
 }
 
+- (IBAction)save:(id)sender {
+}
+
+- (IBAction)reset:(id)sender {
+    self.mainImage.image = nil;
+}
+
+- (IBAction)settings:(id)sender {
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 1)
+	{
+        //Tweet Image
+    }
+	if (buttonIndex == 0)
+	{
+        //Save Image
+        
+    }
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     mouseSwiped = NO;
