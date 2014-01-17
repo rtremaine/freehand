@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -49,7 +49,7 @@
                                     <action selector="pencilPressed:" destination="2" eventType="touchUpInside" id="U73-g8-m3D"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-GV-AWq">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-GV-AWq">
                                 <rect key="frame" x="227" y="528" width="73" height="30"/>
                                 <state key="normal" title="Erase">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,19 +70,6 @@
                                     <action selector="reset:" destination="2" eventType="touchUpInside" id="8lQ-5K-rfK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4I8-1G-P49">
-                                <rect key="frame" x="227" y="20" width="73" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="Wve-Cq-Ffc"/>
-                                </constraints>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="save:" destination="2" eventType="touchUpInside" id="mq5-fD-ZfJ"/>
-                                    <action selector="savePressed:" destination="2" eventType="touchUpInside" id="bx5-6d-gCk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBQ-Tz-mVh">
                                 <rect key="frame" x="124" y="20" width="73" height="30"/>
                                 <constraints>
@@ -96,13 +83,21 @@
                                     <segue destination="nHk-kK-ihD" kind="modal" id="MgO-lf-tqf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY5-vr-Nfb">
+                                <rect key="frame" x="254" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="2" eventType="touchUpInside" id="gEY-LT-qsf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4I8-1G-P49" secondAttribute="trailing" constant="20" symbolic="YES" id="3CA-CU-3fH"/>
                             <constraint firstItem="vab-Ss-tJW" firstAttribute="baseline" secondItem="fEA-C2-zqv" secondAttribute="baseline" id="79e-YR-57z"/>
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="AXk-U6-Fcc"/>
-                            <constraint firstItem="4I8-1G-P49" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="CVg-nI-Z81"/>
                             <constraint firstItem="SBQ-Tz-mVh" firstAttribute="centerX" secondItem="OWl-4k-pwu" secondAttribute="centerX" id="DdU-Xj-msQ"/>
                             <constraint firstItem="vab-Ss-tJW" firstAttribute="leading" secondItem="fEA-C2-zqv" secondAttribute="trailing" constant="8" symbolic="YES" id="GNI-CZ-DNY"/>
                             <constraint firstAttribute="bottom" secondItem="fEA-C2-zqv" secondAttribute="bottom" constant="10" id="Hpc-pN-eKR"/>
@@ -119,7 +114,6 @@
                             <constraint firstItem="dIy-6Y-B7o" firstAttribute="top" secondItem="3" secondAttribute="top" id="pRW-2j-ZGw"/>
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="sPD-GV-fKU"/>
                             <constraint firstAttribute="trailing" secondItem="x4n-GV-AWq" secondAttribute="trailing" constant="20" symbolic="YES" id="vbc-f9-cpf"/>
-                            <constraint firstItem="4I8-1G-P49" firstAttribute="leading" secondItem="x4n-GV-AWq" secondAttribute="leading" id="wDF-fx-BR7"/>
                         </constraints>
                     </view>
                     <connections>
