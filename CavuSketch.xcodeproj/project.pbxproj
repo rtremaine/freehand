@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4718899ABA00108BD8 /* UIKit.framework */; };
+		D17BAF4A18899ABA00108BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4918899ABA00108BD8 /* Foundation.framework */; };
+		D17BAF4C18899ABA00108BD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4B18899ABA00108BD8 /* CoreGraphics.framework */; };
+		D17BAF5218899ABA00108BD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF5018899ABA00108BD8 /* InfoPlist.strings */; };
+		D17BAF5418899ABA00108BD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF5318899ABA00108BD8 /* main.m */; };
+		D17BAF5818899ABA00108BD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF5718899ABA00108BD8 /* AppDelegate.m */; };
+		D17BAF5A18899ABA00108BD8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF5918899ABA00108BD8 /* Default.png */; };
+		D17BAF5C18899ABA00108BD8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF5B18899ABA00108BD8 /* Default@2x.png */; };
+		D17BAF5E18899ABA00108BD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF5D18899ABA00108BD8 /* Default-568h@2x.png */; };
+		D17BAF6118899ABA00108BD8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF5F18899ABA00108BD8 /* MainStoryboard_iPhone.storyboard */; };
+		D17BAF6418899ABA00108BD8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF6218899ABA00108BD8 /* MainStoryboard_iPad.storyboard */; };
+		D17BAF6718899ABA00108BD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF6618899ABA00108BD8 /* ViewController.m */; };
+		D17BAF6F18899ABB00108BD8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF6E18899ABB00108BD8 /* SenTestingKit.framework */; };
+		D17BAF7018899ABB00108BD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4718899ABA00108BD8 /* UIKit.framework */; };
+		D17BAF7118899ABB00108BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4918899ABA00108BD8 /* Foundation.framework */; };
+		D17BAF7918899ABB00108BD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF7718899ABB00108BD8 /* InfoPlist.strings */; };
+		D17BAF7C18899ABB00108BD8 /* CavuSketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */; };
+		D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF851889A78700108BD8 /* Twitter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D17BAF7218899ABB00108BD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D17BAF3C18899ABA00108BD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D17BAF4318899ABA00108BD8;
+			remoteInfo = CavuSketch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D17BAF4418899ABA00108BD8 /* CavuSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CavuSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17BAF4718899ABA00108BD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D17BAF4918899ABA00108BD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D17BAF4B18899ABA00108BD8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D17BAF4F18899ABA00108BD8 /* CavuSketch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CavuSketch-Info.plist"; sourceTree = "<group>"; };
+		D17BAF5118899ABA00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D17BAF5318899ABA00108BD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D17BAF5518899ABA00108BD8 /* CavuSketch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CavuSketch-Prefix.pch"; sourceTree = "<group>"; };
+		D17BAF5618899ABA00108BD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D17BAF5718899ABA00108BD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D17BAF5918899ABA00108BD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D17BAF5B18899ABA00108BD8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D17BAF5D18899ABA00108BD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D17BAF6018899ABA00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D17BAF6318899ABA00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		D17BAF6518899ABA00108BD8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D17BAF6618899ABA00108BD8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CavuSketchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17BAF6E18899ABB00108BD8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D17BAF7618899ABB00108BD8 /* CavuSketchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CavuSketchTests-Info.plist"; sourceTree = "<group>"; };
+		D17BAF7818899ABB00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D17BAF7A18899ABB00108BD8 /* CavuSketchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CavuSketchTests.h; sourceTree = "<group>"; };
+		D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CavuSketchTests.m; sourceTree = "<group>"; };
+		D17BAF851889A78700108BD8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D17BAF4118899ABA00108BD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */,
+				D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */,
+				D17BAF4A18899ABA00108BD8 /* Foundation.framework in Frameworks */,
+				D17BAF4C18899ABA00108BD8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BAF6918899ABB00108BD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF6F18899ABB00108BD8 /* SenTestingKit.framework in Frameworks */,
+				D17BAF7018899ABB00108BD8 /* UIKit.framework in Frameworks */,
+				D17BAF7118899ABB00108BD8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D17BAF3B18899AB900108BD8 = {
+			isa = PBXGroup;
+			children = (
+				D17BAF851889A78700108BD8 /* Twitter.framework */,
+				D17BAF4D18899ABA00108BD8 /* CavuSketch */,
+				D17BAF7418899ABB00108BD8 /* CavuSketchTests */,
+				D17BAF4618899ABA00108BD8 /* Frameworks */,
+				D17BAF4518899ABA00108BD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D17BAF4518899ABA00108BD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF4418899ABA00108BD8 /* CavuSketch.app */,
+				D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D17BAF4618899ABA00108BD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF4718899ABA00108BD8 /* UIKit.framework */,
+				D17BAF4918899ABA00108BD8 /* Foundation.framework */,
+				D17BAF4B18899ABA00108BD8 /* CoreGraphics.framework */,
+				D17BAF6E18899ABB00108BD8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D17BAF4D18899ABA00108BD8 /* CavuSketch */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF5618899ABA00108BD8 /* AppDelegate.h */,
+				D17BAF5718899ABA00108BD8 /* AppDelegate.m */,
+				D17BAF5F18899ABA00108BD8 /* MainStoryboard_iPhone.storyboard */,
+				D17BAF6218899ABA00108BD8 /* MainStoryboard_iPad.storyboard */,
+				D17BAF6518899ABA00108BD8 /* ViewController.h */,
+				D17BAF6618899ABA00108BD8 /* ViewController.m */,
+				D17BAF4E18899ABA00108BD8 /* Supporting Files */,
+			);
+			path = CavuSketch;
+			sourceTree = "<group>";
+		};
+		D17BAF4E18899ABA00108BD8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF4F18899ABA00108BD8 /* CavuSketch-Info.plist */,
+				D17BAF5018899ABA00108BD8 /* InfoPlist.strings */,
+				D17BAF5318899ABA00108BD8 /* main.m */,
+				D17BAF5518899ABA00108BD8 /* CavuSketch-Prefix.pch */,
+				D17BAF5918899ABA00108BD8 /* Default.png */,
+				D17BAF5B18899ABA00108BD8 /* Default@2x.png */,
+				D17BAF5D18899ABA00108BD8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D17BAF7418899ABB00108BD8 /* CavuSketchTests */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF7A18899ABB00108BD8 /* CavuSketchTests.h */,
+				D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */,
+				D17BAF7518899ABB00108BD8 /* Supporting Files */,
+			);
+			path = CavuSketchTests;
+			sourceTree = "<group>";
+		};
+		D17BAF7518899ABB00108BD8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D17BAF7618899ABB00108BD8 /* CavuSketchTests-Info.plist */,
+				D17BAF7718899ABB00108BD8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D17BAF4318899ABA00108BD8 /* CavuSketch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketch" */;
+			buildPhases = (
+				D17BAF4018899ABA00108BD8 /* Sources */,
+				D17BAF4118899ABA00108BD8 /* Frameworks */,
+				D17BAF4218899ABA00108BD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CavuSketch;
+			productName = CavuSketch;
+			productReference = D17BAF4418899ABA00108BD8 /* CavuSketch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D17BAF6C18899ABB00108BD8 /* CavuSketchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketchTests" */;
+			buildPhases = (
+				D17BAF6818899ABB00108BD8 /* Sources */,
+				D17BAF6918899ABB00108BD8 /* Frameworks */,
+				D17BAF6A18899ABB00108BD8 /* Resources */,
+				D17BAF6B18899ABB00108BD8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D17BAF7318899ABB00108BD8 /* PBXTargetDependency */,
+			);
+			name = CavuSketchTests;
+			productName = CavuSketchTests;
+			productReference = D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D17BAF3C18899ABA00108BD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Cavu Labs";
+			};
+			buildConfigurationList = D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "CavuSketch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D17BAF3B18899AB900108BD8;
+			productRefGroup = D17BAF4518899ABA00108BD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D17BAF4318899ABA00108BD8 /* CavuSketch */,
+				D17BAF6C18899ABB00108BD8 /* CavuSketchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D17BAF4218899ABA00108BD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF5218899ABA00108BD8 /* InfoPlist.strings in Resources */,
+				D17BAF5A18899ABA00108BD8 /* Default.png in Resources */,
+				D17BAF5C18899ABA00108BD8 /* Default@2x.png in Resources */,
+				D17BAF5E18899ABA00108BD8 /* Default-568h@2x.png in Resources */,
+				D17BAF6118899ABA00108BD8 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D17BAF6418899ABA00108BD8 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BAF6A18899ABB00108BD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF7918899ABB00108BD8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D17BAF6B18899ABB00108BD8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D17BAF4018899ABA00108BD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF5418899ABA00108BD8 /* main.m in Sources */,
+				D17BAF5818899ABA00108BD8 /* AppDelegate.m in Sources */,
+				D17BAF6718899ABA00108BD8 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BAF6818899ABB00108BD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17BAF7C18899ABB00108BD8 /* CavuSketchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D17BAF7318899ABB00108BD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D17BAF4318899ABA00108BD8 /* CavuSketch */;
+			targetProxy = D17BAF7218899ABB00108BD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D17BAF5018899ABA00108BD8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D17BAF5118899ABA00108BD8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D17BAF5F18899ABA00108BD8 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D17BAF6018899ABA00108BD8 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D17BAF6218899ABA00108BD8 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D17BAF6318899ABA00108BD8 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D17BAF7718899ABB00108BD8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D17BAF7818899ABB00108BD8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D17BAF7D18899ABB00108BD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D17BAF7E18899ABB00108BD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D17BAF8018899ABB00108BD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D17BAF8118899ABB00108BD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D17BAF8318899ABB00108BD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CavuSketch.app/CavuSketch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketchTests/CavuSketchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D17BAF8418899ABB00108BD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CavuSketch.app/CavuSketch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketchTests/CavuSketchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "CavuSketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17BAF7D18899ABB00108BD8 /* Debug */,
+				D17BAF7E18899ABB00108BD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17BAF8018899ABB00108BD8 /* Debug */,
+				D17BAF8118899ABB00108BD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17BAF8318899ABB00108BD8 /* Debug */,
+				D17BAF8418899ABB00108BD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D17BAF3C18899ABA00108BD8 /* Project object */;
+}
