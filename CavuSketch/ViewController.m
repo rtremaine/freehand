@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Twitter/TWTweetComposeViewController.h"
 
 @interface ViewController ()
 
@@ -134,6 +135,43 @@
 	if (buttonIndex == 1)
 	{
         //Tweet Image
+        Class tweeterClass = NSClassFromString(@"TWTweetComposeViewController");
+        
+        if(tweeterClass != nil) {   // check for Twitter integration
+            
+            // check Twitter accessibility and at least one account is setup
+            if([TWTweetComposeViewController canSendTweet]) {
+                
+                UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
+                [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
+                UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+                
+                TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+                // set initial text
+                [tweetViewController setInitialText:@"Check out this drawing I made from a tutorial on raywenderlich.com:"];
+                
+                // add image
+                [tweetViewController addImage:SaveImage];
+                tweetViewController.completionHandler = ^(TWTweetComposeViewControllerResult result) {
+                    if(result == TWTweetComposeViewControllerResultDone) {
+                        // the user finished composing a tweet
+                    } else if(result == TWTweetComposeViewControllerResultCancelled) {
+                        // the user cancelled composing a tweet
+                    }
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                };
+                
+                [self presentViewController:tweetViewController animated:YES completion:nil];
+            } else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You can't send a tweet right now, make sure you have at least one Twitter account setup and your device is using iOS5" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+            }
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You must upgrade to iOS5.0 in order to send tweets from this application" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+        }
+
     }
 	if (buttonIndex == 0)
 	{
@@ -212,4 +250,5 @@
     self.tempDrawImage.image = nil;
     UIGraphicsEndImageContext();
 }
+
 @end

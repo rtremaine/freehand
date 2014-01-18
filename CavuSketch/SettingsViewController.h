@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol SettingsViewControllerDelegate <NSObject>
-- (void)closeSettings:(id)sender;
+//- (void)closeSettings:(id)sender;
 @end
 
 @interface SettingsViewController : UIViewController
