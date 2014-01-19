@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B7F8434188C851C0087D561 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7F8433188C851C0087D561 /* MessageUI.framework */; };
 		9BACD4A8188B201900154156 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BACD4A7188B201900154156 /* Social.framework */; };
 		D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4718899ABA00108BD8 /* UIKit.framework */; };
 		D17BAF4A18899ABA00108BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4918899ABA00108BD8 /* Foundation.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B7F8433188C851C0087D561 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9BACD4A7188B201900154156 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D17BAF4418899ABA00108BD8 /* CavuSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CavuSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17BAF4718899ABA00108BD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7F8434188C851C0087D561 /* MessageUI.framework in Frameworks */,
 				9BACD4A8188B201900154156 /* Social.framework in Frameworks */,
 				D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */,
 				D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */,
@@ -118,6 +121,7 @@
 		D17BAF4618899ABA00108BD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B7F8433188C851C0087D561 /* MessageUI.framework */,
 				9BACD4A7188B201900154156 /* Social.framework */,
 				D17BAF4718899ABA00108BD8 /* UIKit.framework */,
 				D17BAF4918899ABA00108BD8 /* Foundation.framework */,

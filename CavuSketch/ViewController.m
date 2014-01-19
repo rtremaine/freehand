@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Twitter/TWTweetComposeViewController.h"
+#import "Social/Social.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface ViewController ()
 
@@ -23,7 +25,7 @@
     red = 0.0/255.0;
     green = 0.0/255.0;
     blue = 0.0/255.0;
-    brush = 10.0;
+    brush = 7.0;
     opacity = 1.0;
     
     [super viewDidLoad];
@@ -126,54 +128,65 @@
                                                              delegate:self
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Save to Camera Roll", @"Tweet it!", @"Cancel", nil];
+                                                    otherButtonTitles:@"Save to Camera Roll", @"Email it!", @"Tweet it!", @"Cancel", nil];
     [actionSheet showInView:self.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	if (buttonIndex == 1)
+	if (buttonIndex == 2)
 	{
         //Tweet Image
-        Class tweeterClass = NSClassFromString(@"TWTweetComposeViewController");
-        
-        if(tweeterClass != nil) {   // check for Twitter integration
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:@"Sent from CavuSketch!"];
+            UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
+            [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
+            UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
             
-            // check Twitter accessibility and at least one account is setup
-            if([TWTweetComposeViewController canSendTweet]) {
-                
-                UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
-                [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
-                UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-                UIGraphicsEndImageContext();
-                
-                TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-                // set initial text
-                [tweetViewController setInitialText:@"Check out this drawing I made from a tutorial on raywenderlich.com:"];
-                
-                // add image
-                [tweetViewController addImage:SaveImage];
-                tweetViewController.completionHandler = ^(TWTweetComposeViewControllerResult result) {
-                    if(result == TWTweetComposeViewControllerResultDone) {
-                        // the user finished composing a tweet
-                    } else if(result == TWTweetComposeViewControllerResultCancelled) {
-                        // the user cancelled composing a tweet
-                    }
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                };
-                
-                [self presentViewController:tweetViewController animated:YES completion:nil];
-            } else {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You can't send a tweet right now, make sure you have at least one Twitter account setup and your device is using iOS5" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alertView show];
-            }
+            [tweetSheet addImage:SaveImage];
+            
+            [self presentViewController:tweetSheet animated:YES completion:nil];
         } else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You must upgrade to iOS5.0 in order to send tweets from this application" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You can't send a tweet right now, make sure you have at least one Twitter account setup and your device is using iOS6" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
         }
 
     }
-	if (buttonIndex == 0)
+    else if (buttonIndex == 1)
+    {
+        // Email Image
+        if ([MFMailComposeViewController canSendMail])
+        {
+            MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+            controller.mailComposeDelegate = self;
+            [controller.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_bg_iPhone.png"] forBarMetrics:UIBarMetricsDefault];
+            controller.navigationBar.tintColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
+            [controller setSubject:@""];
+            [controller setMessageBody:@" " isHTML:YES];
+            [controller setToRecipients:[NSArray arrayWithObjects:@"",nil]];
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            
+            UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
+            [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
+            UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            //UIImage *ui = resultimg.image;
+            pasteboard.image = SaveImage;
+            NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(SaveImage)];
+            [controller addAttachmentData:imageData mimeType:@"image/png" fileName:@" "];
+            [self presentViewController:controller animated:YES completion:NULL];
+        }
+        else{
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"alrt" message:nil delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil] ;
+            [alert show];
+        }
+    }
+    else if (buttonIndex == 0)
 	{
         //Save Image
         UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
@@ -182,6 +195,16 @@
         UIGraphicsEndImageContext();
         UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
     }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"It's away!");
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
