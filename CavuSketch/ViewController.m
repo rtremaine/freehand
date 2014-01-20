@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "Twitter/TWTweetComposeViewController.h"
 #import "Social/Social.h"
 #import <MessageUI/MFMailComposeViewController.h>
 
@@ -124,87 +123,17 @@
 }
 
 - (IBAction)save:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
-                                                             delegate:self
-                                                    cancelButtonTitle:nil
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Save to Camera Roll", @"Email it!", @"Tweet it!", @"Cancel", nil];
-    [actionSheet showInView:self.view];
-}
+    NSString *text = @"Check out my CavuSketch!";
+    UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
+    [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
+    UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex == 2)
-	{
-        //Tweet Image
-        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-        {
-            SLComposeViewController *tweetSheet = [SLComposeViewController
-                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [tweetSheet setInitialText:@"Sent from CavuSketch!"];
-            UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
-            [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
-            UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            
-            [tweetSheet addImage:SaveImage];
-            
-            [self presentViewController:tweetSheet animated:YES completion:nil];
-        } else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"You can't send a tweet right now, make sure you have at least one Twitter account setup and your device is using iOS6" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alertView show];
-        }
-
-    }
-    else if (buttonIndex == 1)
-    {
-        // Email Image
-        if ([MFMailComposeViewController canSendMail])
-        {
-            MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
-            controller.mailComposeDelegate = self;
-            [controller.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_bg_iPhone.png"] forBarMetrics:UIBarMetricsDefault];
-            controller.navigationBar.tintColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
-            [controller setSubject:@""];
-            [controller setMessageBody:@" " isHTML:YES];
-            [controller setToRecipients:[NSArray arrayWithObjects:@"",nil]];
-            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-            
-            UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
-            [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
-            UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            
-            //UIImage *ui = resultimg.image;
-            pasteboard.image = SaveImage;
-            NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(SaveImage)];
-            [controller addAttachmentData:imageData mimeType:@"image/png" fileName:@" "];
-            [self presentViewController:controller animated:YES completion:NULL];
-        }
-        else{
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"alrt" message:nil delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil] ;
-            [alert show];
-        }
-    }
-    else if (buttonIndex == 0)
-	{
-        //Save Image
-        UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
-        [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
-        UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
-    }
-}
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller
-          didFinishWithResult:(MFMailComposeResult)result
-                        error:(NSError*)error;
-{
-    if (result == MFMailComposeResultSent) {
-        NSLog(@"It's away!");
-    }
-    [self dismissModalViewControllerAnimated:YES];
+    
+    NSArray *activityItems = [NSArray arrayWithObjects:text,SaveImage , nil];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems: activityItems applicationActivities:nil];
+    [activityController setValue:@"Here's your CavuSketch!" forKey:@"subject"];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo

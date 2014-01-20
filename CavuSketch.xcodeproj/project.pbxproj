@@ -26,7 +26,6 @@
 		D17BAF7118899ABB00108BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4918899ABA00108BD8 /* Foundation.framework */; };
 		D17BAF7918899ABB00108BD8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D17BAF7718899ABB00108BD8 /* InfoPlist.strings */; };
 		D17BAF7C18899ABB00108BD8 /* CavuSketchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */; };
-		D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF851889A78700108BD8 /* Twitter.framework */; };
 		D1A5CACE1889B8870072A08E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A5CACD1889B8870072A08E /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,6 @@
 			files = (
 				9B7F8434188C851C0087D561 /* MessageUI.framework in Frameworks */,
 				9BACD4A8188B201900154156 /* Social.framework in Frameworks */,
-				D17BAF861889A78700108BD8 /* Twitter.framework in Frameworks */,
 				D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */,
 				D17BAF4A18899ABA00108BD8 /* Foundation.framework in Frameworks */,
 				D17BAF4C18899ABA00108BD8 /* CoreGraphics.framework in Frameworks */,
@@ -227,6 +225,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Cavu Labs";
+				TargetAttributes = {
+					D17BAF4318899ABA00108BD8 = {
+						DevelopmentTeam = ZZR4WFYEBD;
+					};
+				};
 			};
 			buildConfigurationList = D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "CavuSketch" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -413,10 +416,13 @@
 		D17BAF8018899ABB00108BD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
 				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,10 +430,13 @@
 		D17BAF8118899ABB00108BD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
 				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
