@@ -19,6 +19,10 @@
 @synthesize mainImage;
 @synthesize tempDrawImage;
 
+@synthesize blackButton;
+@synthesize redButton;
+@synthesize eraseButton;
+
 - (void)viewDidLoad
 {
     red = 0.0/255.0;
@@ -26,6 +30,9 @@
     blue = 0.0/255.0;
     brush = 7.0;
     opacity = 1.0;
+    
+    // enable black pen when app starts
+    [self toggleButton:blackButton enabled:true];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -106,6 +113,29 @@
             blue = 0.0/255.0;
             break;
     }
+    
+    [self disableActionButtons];
+    
+    [self toggleButton:PressedButton enabled:true];
+}
+
+- (void) disableActionButtons {
+    [self toggleButton:blackButton enabled:false];
+    [self toggleButton:redButton enabled:false];
+    [self toggleButton:eraseButton enabled:false];
+}
+
+- (void) toggleButton:(UIButton *)btn
+                     enabled:(BOOL)enable {
+    if (enable) {
+        //btn.selected = true;
+        btn.layer.borderColor = [UIColor blackColor].CGColor;
+        btn.layer.borderWidth = 1;
+    } else {
+        //btn.selected = false;
+        btn.layer.borderColor = [UIColor blackColor].CGColor;
+        btn.layer.borderWidth = 0;
+    }
 }
 
 - (IBAction)eraserPressed:(id)sender {
@@ -113,6 +143,10 @@
     green = 255.0/255.0;
     blue = 255.0/255.0;
     opacity = 1.0;
+    brush = 10;
+    
+    [self disableActionButtons];
+    [self toggleButton:sender enabled:true];
 }
 
 - (IBAction)reset:(id)sender {

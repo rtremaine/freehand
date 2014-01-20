@@ -23,11 +23,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWl-4k-pwu" userLabel="tempDrawImage">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEA-C2-zqv">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEA-C2-zqv">
                                 <rect key="frame" x="20" y="528" width="44" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="EXc-8P-eZv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="B">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,11 +37,12 @@
                                     <action selector="pencilPressed:" destination="2" eventType="touchUpInside" id="ez9-6Z-Agu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Ss-tJW">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Ss-tJW">
                                 <rect key="frame" x="72" y="528" width="44" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="LgV-iI-PwX"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="R">
                                     <color key="titleColor" red="1" green="0.15062450261057192" blue="0.083692067844172047" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,7 +52,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-GV-AWq">
-                                <rect key="frame" x="227" y="528" width="73" height="30"/>
+                                <rect key="frame" x="237" y="528" width="63" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Erase">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,11 +61,12 @@
                                     <action selector="eraserPressed:" destination="2" eventType="touchUpInside" id="PbW-cm-B3m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-eL-ADQ">
-                                <rect key="frame" x="20" y="20" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-eL-ADQ">
+                                <rect key="frame" x="0.0" y="20" width="73" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="LTA-Cm-mmf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -70,11 +74,12 @@
                                     <action selector="reset:" destination="2" eventType="touchUpInside" id="8lQ-5K-rfK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBQ-Tz-mVh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBQ-Tz-mVh">
                                 <rect key="frame" x="124" y="20" width="73" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="0wM-fA-YH4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -84,11 +89,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY5-vr-Nfb">
-                                <rect key="frame" x="254" y="20" width="46" height="30"/>
+                                <rect key="frame" x="234" y="23" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Share"/>
                                 <connections>
                                     <action selector="save:" destination="2" eventType="touchUpInside" id="gEY-LT-qsf"/>
                                 </connections>
@@ -117,7 +121,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blackButton" destination="fEA-C2-zqv" id="qHR-eU-BQD"/>
+                        <outlet property="eraseButton" destination="x4n-GV-AWq" id="9b6-Cb-Eqb"/>
                         <outlet property="mainImage" destination="dIy-6Y-B7o" id="zLA-yz-PL9"/>
+                        <outlet property="redButton" destination="vab-Ss-tJW" id="c8o-P6-fDb"/>
                         <outlet property="tempDrawImage" destination="OWl-4k-pwu" id="T5o-pi-NSO"/>
                     </connections>
                 </viewController>
