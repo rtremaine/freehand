@@ -191,11 +191,16 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     
     mouseSwiped = YES;
+    CGSize size = [self currentSize];
     UITouch *touch = [touches anyObject];
     CGPoint currentPoint = [touch locationInView:self.view];
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    UIGraphicsBeginImageContext(size);
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    
+    NSNumber* value = [NSNumber numberWithFloat:size.width];
+    NSLog(@"%@", [value stringValue]);
+    
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
@@ -213,9 +218,11 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
+    CGSize size = [self currentSize];
+    
     if(!mouseSwiped) {
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        UIGraphicsBeginImageContext(size);
+        [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
         CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
@@ -227,12 +234,32 @@
         UIGraphicsEndImageContext();
     }
     
-    UIGraphicsBeginImageContext(self.mainImage.frame.size);
-    [self.mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
+    UIGraphicsBeginImageContext(size);
+    [self.mainImage.image drawInRect:CGRectMake(0, 0, size.width, size.height) blendMode:kCGBlendModeNormal alpha:1.0];
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height) blendMode:kCGBlendModeNormal alpha:opacity];
     self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
     self.tempDrawImage.image = nil;
     UIGraphicsEndImageContext();
 }
+
+- (CGSize) currentSize
+{
+    return [self sizeInOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
+- (CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation {
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIApplication *application = [UIApplication sharedApplication];
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        size = CGSizeMake(size.height, size.width);
+    }
+    if (application.statusBarHidden == NO)
+    {
+        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
+    }
+    return size;
+}
+
 
 @end
