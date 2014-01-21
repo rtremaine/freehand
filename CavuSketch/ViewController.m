@@ -143,8 +143,8 @@
     red = 255.0/255.0;
     green = 255.0/255.0;
     blue = 255.0/255.0;
-    opacity = 1.0;
-    brush = 15;
+    //opacity = 1.0;
+    //brush = 15;
     
     [self disableActionButtons];
     [self toggleButton:sender enabled:true];

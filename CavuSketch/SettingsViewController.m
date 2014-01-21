@@ -30,6 +30,10 @@
 
 - (void)viewDidLoad
 {
+    self.brushControl.value = brush;
+    self.opacityControl.value = opacity;
+    [self sliderChanged:self.brushControl];
+    [self sliderChanged:self.opacityControl];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
