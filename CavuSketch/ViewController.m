@@ -144,7 +144,7 @@
     green = 255.0/255.0;
     blue = 255.0/255.0;
     opacity = 1.0;
-    brush = 10;
+    brush = 15;
     
     [self disableActionButtons];
     [self toggleButton:sender enabled:true];
@@ -166,6 +166,19 @@
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems: activityItems applicationActivities:nil];
     [activityController setValue:@"Here's your CavuSketch!" forKey:@"subject"];
     [self presentViewController:activityController animated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    SettingsViewController * settingsVC = (SettingsViewController *)segue.destinationViewController;
+    settingsVC.delegate = self;
+    settingsVC.brush = brush;
+    settingsVC.opacity = opacity;
+}
+
+- (void)closeSettings:(id)sender {
+    brush = ((SettingsViewController*)sender).brush;
+    opacity = ((SettingsViewController*)sender).opacity;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo

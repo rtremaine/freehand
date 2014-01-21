@@ -130,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4l-tD-ogd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4l-tD-ogd">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ebO-Y5-Gmm"/>
                                     <barButtonItem title="Close" id="RAV-ik-mYW">
@@ -142,52 +142,52 @@
                                 </items>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brush" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-V3-vQA">
-                                <rect key="frame" x="15" y="55" width="46" height="21"/>
+                                <rect key="frame" x="15" y="75" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-gw-f1J">
-                                <rect key="frame" x="252" y="55" width="42" height="21"/>
+                                <rect key="frame" x="252" y="75" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzJ-lB-WOX">
-                                <rect key="frame" x="252" y="207" width="42" height="21"/>
+                                <rect key="frame" x="252" y="227" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xg-fQ-TZt">
-                                <rect key="frame" x="15" y="207" width="60" height="21"/>
+                                <rect key="frame" x="15" y="227" width="60" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="cRz-27-lQy">
-                                <rect key="frame" x="103" y="49" width="118" height="34"/>
+                                <rect key="frame" x="103" y="69" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="nHk-kK-ihD" eventType="valueChanged" id="Ytg-UE-NUf"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9C5-G1-DWP">
-                                <rect key="frame" x="101" y="195" width="118" height="34"/>
+                                <rect key="frame" x="101" y="215" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="nHk-kK-ihD" eventType="valueChanged" id="ZxP-YR-WcM"/>
                                 </connections>
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-C4-Pld">
-                                <rect key="frame" x="166" y="95" width="128" height="92"/>
+                                <rect key="frame" x="166" y="115" width="128" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8q-RO-fek">
-                                <rect key="frame" x="166" y="246" width="128" height="92"/>
+                                <rect key="frame" x="166" y="266" width="128" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -199,12 +199,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="brushControl" destination="LOV-V3-vQA" id="v3A-l5-CJP"/>
+                        <outlet property="brushControl" destination="cRz-27-lQy" id="UZZ-ew-VHE"/>
                         <outlet property="brushPreview" destination="AZe-C4-Pld" id="fGU-Y4-JEE"/>
-                        <outlet property="brushValueLabel" destination="cRz-27-lQy" id="tMG-o0-0VZ"/>
-                        <outlet property="opacityControl" destination="8Xg-fQ-TZt" id="VMu-tv-nUT"/>
+                        <outlet property="brushValueLabel" destination="0c4-gw-f1J" id="VMx-uT-gSx"/>
+                        <outlet property="opacityControl" destination="9C5-G1-DWP" id="oEF-Xt-llX"/>
                         <outlet property="opacityPreview" destination="b8q-RO-fek" id="rAL-CO-Jpo"/>
-                        <outlet property="opacityValueLabel" destination="9C5-G1-DWP" id="gbw-yF-VCf"/>
+                        <outlet property="opacityValueLabel" destination="lzJ-lB-WOX" id="TMH-fp-6DE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdS-N4-OKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
