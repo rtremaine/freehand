@@ -60,6 +60,7 @@
 - (IBAction)pencilPressed:(id)sender {
     UIButton * PressedButton = (UIButton*)sender;
     
+    
     switch(PressedButton.tag)
     {
         case 0:
@@ -151,9 +152,6 @@
 
 - (IBAction)reset:(id)sender {
     self.mainImage.image = nil;
-}
-
-- (IBAction)settings:(id)sender {
 }
 
 - (IBAction)save:(id)sender {
