@@ -198,8 +198,8 @@
     UIGraphicsBeginImageContext(size);
     [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
     
-    NSNumber* value = [NSNumber numberWithFloat:size.width];
-    NSLog(@"%@", [value stringValue]);
+    //NSNumber* value = [NSNumber numberWithFloat:size.width];
+    //NSLog(@"%@", [value stringValue]);
     
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
