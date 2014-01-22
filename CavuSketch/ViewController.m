@@ -143,7 +143,7 @@
     red = 255.0/255.0;
     green = 255.0/255.0;
     blue = 255.0/255.0;
-    //opacity = 1.0;
+    opacity = 1.0;
     //brush = 15;
     
     [self disableActionButtons];
@@ -155,7 +155,7 @@
 }
 
 - (IBAction)save:(id)sender {
-    NSString *text = @"Check out my CavuSketch!";
+    NSString *text = @"Check out my Freehand!";
     UIGraphicsBeginImageContextWithOptions(mainImage.bounds.size, NO,0.0);
     [mainImage.image drawInRect:CGRectMake(0, 0, mainImage.frame.size.width, mainImage.frame.size.height)];
     UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -164,7 +164,7 @@
     
     NSArray *activityItems = [NSArray arrayWithObjects:text,SaveImage , nil];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems: activityItems applicationActivities:nil];
-    [activityController setValue:@"Here's your CavuSketch!" forKey:@"subject"];
+    [activityController setValue:@"Here's your Freehand!" forKey:@"subject"];
     [self presentViewController:activityController animated:YES completion:nil];
 }
 
@@ -204,16 +204,11 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     
     mouseSwiped = YES;
-    CGSize size = [self currentSize];
     UITouch *touch = [touches anyObject];
     CGPoint currentPoint = [touch locationInView:self.view];
     
-    UIGraphicsBeginImageContext(size);
-    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    
-    //NSNumber* value = [NSNumber numberWithFloat:size.width];
-    //NSLog(@"%@", [value stringValue]);
-    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
     CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
     CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
@@ -231,11 +226,9 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
-    CGSize size = [self currentSize];
-    
     if(!mouseSwiped) {
-        UIGraphicsBeginImageContext(size);
-        [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
         CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
         CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
@@ -247,31 +240,12 @@
         UIGraphicsEndImageContext();
     }
     
-    UIGraphicsBeginImageContext(size);
-    [self.mainImage.image drawInRect:CGRectMake(0, 0, size.width, size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, size.width, size.height) blendMode:kCGBlendModeNormal alpha:opacity];
+    UIGraphicsBeginImageContext(self.mainImage.frame.size);
+    [self.mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
     self.mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
     self.tempDrawImage.image = nil;
     UIGraphicsEndImageContext();
-}
-
-- (CGSize) currentSize
-{
-    return [self sizeInOrientation:[UIApplication sharedApplication].statusBarOrientation];
-}
-
-- (CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation {
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    UIApplication *application = [UIApplication sharedApplication];
-    if (UIInterfaceOrientationIsLandscape(orientation))
-    {
-        size = CGSizeMake(size.height, size.width);
-    }
-    if (application.statusBarHidden == NO)
-    {
-        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
-    }
-    return size;
 }
 
 
