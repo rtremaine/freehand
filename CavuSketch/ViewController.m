@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Social/Social.h"
 #import <MessageUI/MFMailComposeViewController.h>
+#import "InfColorPickerController.h"
 
 @interface ViewController ()
 
@@ -18,10 +19,8 @@
 
 @synthesize mainImage;
 @synthesize tempDrawImage;
-
-@synthesize blackButton;
-//@synthesize redButton;
-@synthesize eraseButton;
+@synthesize color;
+@synthesize paletteButton;
 
 - (void)viewDidLoad
 {
@@ -30,9 +29,7 @@
     blue = 0.0/255.0;
     brush = 7.0;
     opacity = 1.0;
-    
-    // enable black pen when app starts
-    [self toggleButton:blackButton enabled:true];
+    color = [UIColor blackColor];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -57,75 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pencilPressed:(id)sender {
-    UIButton * PressedButton = (UIButton*)sender;
-    
-    
-    switch(PressedButton.tag)
-    {
-        case 0:
-            red = 0.0/255.0;
-            green = 0.0/255.0;
-            blue = 0.0/255.0;
-            break;
-        case 1:
-            red = 255.0/255.0;
-            green = 0.0/255.0;
-            blue = 0.0/255.0;
-            break;
-        case 2:
-            red = 105.0/255.0;
-            green = 105.0/255.0;
-            blue = 105.0/255.0;
-            break;
-        case 3:
-            red = 0.0/255.0;
-            green = 0.0/255.0;
-            blue = 255.0/255.0;
-            break;
-        case 4:
-            red = 102.0/255.0;
-            green = 204.0/255.0;
-            blue = 0.0/255.0;
-            break;
-        case 5:
-            red = 102.0/255.0;
-            green = 255.0/255.0;
-            blue = 0.0/255.0;
-            break;
-        case 6:
-            red = 51.0/255.0;
-            green = 204.0/255.0;
-            blue = 255.0/255.0;
-            break;
-        case 7:
-            red = 160.0/255.0;
-            green = 82.0/255.0;
-            blue = 45.0/255.0;
-            break;
-        case 8:
-            red = 255.0/255.0;
-            green = 102.0/255.0;
-            blue = 0.0/255.0;
-            break;
-        case 9:
-            red = 255.0/255.0;
-            green = 255.0/255.0;
-            blue = 0.0/255.0;
-            break;
-    }
-    
-    [self disableActionButtons];
-    
-    [self toggleButton:PressedButton enabled:true];
-}
-
-- (void) disableActionButtons {
-    [self toggleButton:blackButton enabled:false];
-    //[self toggleButton:redButton enabled:false];
-    [self toggleButton:eraseButton enabled:false];
-}
-
 - (void) toggleButton:(UIButton *)btn
                      enabled:(BOOL)enable {
     if (enable) {
@@ -137,17 +65,6 @@
         btn.layer.borderColor = [UIColor blueColor].CGColor;
         btn.layer.borderWidth = 0;
     }
-}
-
-- (IBAction)eraserPressed:(id)sender {
-    red = 255.0/255.0;
-    green = 255.0/255.0;
-    blue = 255.0/255.0;
-    opacity = 1.0;
-    //brush = 15;
-    
-    [self disableActionButtons];
-    [self toggleButton:sender enabled:true];
 }
 
 - (IBAction)reset:(id)sender {
@@ -164,8 +81,31 @@
     
     NSArray *activityItems = [NSArray arrayWithObjects:text,SaveImage , nil];
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems: activityItems applicationActivities:nil];
-    [activityController setValue:@"Here's your Freehand!" forKey:@"subject"];
+    [activityController setValue:@"Made with Freehand!" forKey:@"subject"];
     [self presentViewController:activityController animated:YES completion:nil];
+}
+
+- (IBAction)changeColor:(id)sender {
+    InfColorPickerController* picker = [ InfColorPickerController colorPickerViewController ];
+    picker.sourceColor = color;
+    picker.delegate = self;
+    //paletteButton.tintColor = color;
+    
+    [ picker presentModallyOverViewController: self ];
+}
+
+- (void) colorPickerControllerDidFinish: (InfColorPickerController*) picker
+{
+    color = picker.resultColor;
+    
+    CGColorRef colorRef = [color CGColor];
+    const CGFloat *_components = CGColorGetComponents(colorRef);
+    red     = _components[0];
+    green = _components[1];
+    blue   = _components[2];
+    //CGFloat calpha = _components[3];
+    
+    [ self dismissModalViewControllerAnimated: YES ];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

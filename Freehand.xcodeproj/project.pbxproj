@@ -11,6 +11,15 @@
 		9B7F8436188DEDC60087D561 /* Upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B7F8435188DEDC60087D561 /* Upload.png */; };
 		9BACD4A8188B201900154156 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BACD4A7188B201900154156 /* Social.framework */; };
 		D15C304018905AFD00C34927 /* Palette.png in Resources */ = {isa = PBXBuildFile; fileRef = D15C303F18905AFD00C34927 /* Palette.png */; };
+		D16EF72418905F3500271AF5 /* InfColorBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF71518905F3500271AF5 /* InfColorBarPicker.m */; };
+		D16EF72518905F3500271AF5 /* InfColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF71718905F3500271AF5 /* InfColorIndicatorView.m */; };
+		D16EF72618905F3500271AF5 /* InfColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF71A18905F3500271AF5 /* InfColorPickerController.m */; };
+		D16EF72718905F3500271AF5 /* InfColorPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF71C18905F3500271AF5 /* InfColorPickerNavigationController.m */; };
+		D16EF72818905F3500271AF5 /* InfColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D16EF71D18905F3500271AF5 /* InfColorPickerView.xib */; };
+		D16EF72918905F3500271AF5 /* InfColorSquarePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF71F18905F3500271AF5 /* InfColorSquarePicker.m */; };
+		D16EF72A18905F3500271AF5 /* InfHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF72118905F3500271AF5 /* InfHSBSupport.m */; };
+		D16EF72B18905F3500271AF5 /* InfSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EF72318905F3500271AF5 /* InfSourceColorView.m */; };
+		D16EF72D18906A1000271AF5 /* Palette@1.5x.png in Resources */ = {isa = PBXBuildFile; fileRef = D16EF72C18906A1000271AF5 /* Palette@1.5x.png */; };
 		D17BAF4818899ABA00108BD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4718899ABA00108BD8 /* UIKit.framework */; };
 		D17BAF4A18899ABA00108BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4918899ABA00108BD8 /* Foundation.framework */; };
 		D17BAF4C18899ABA00108BD8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BAF4B18899ABA00108BD8 /* CoreGraphics.framework */; };
@@ -46,6 +55,23 @@
 		9B7F8435188DEDC60087D561 /* Upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Upload.png; sourceTree = "<group>"; };
 		9BACD4A7188B201900154156 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D15C303F18905AFD00C34927 /* Palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Palette.png; sourceTree = "<group>"; };
+		D16EF71418905F3500271AF5 /* InfColorBarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorBarPicker.h; sourceTree = "<group>"; };
+		D16EF71518905F3500271AF5 /* InfColorBarPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorBarPicker.m; sourceTree = "<group>"; };
+		D16EF71618905F3500271AF5 /* InfColorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorIndicatorView.h; sourceTree = "<group>"; };
+		D16EF71718905F3500271AF5 /* InfColorIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorIndicatorView.m; sourceTree = "<group>"; };
+		D16EF71818905F3500271AF5 /* InfColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorPicker.h; sourceTree = "<group>"; };
+		D16EF71918905F3500271AF5 /* InfColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorPickerController.h; sourceTree = "<group>"; };
+		D16EF71A18905F3500271AF5 /* InfColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorPickerController.m; sourceTree = "<group>"; };
+		D16EF71B18905F3500271AF5 /* InfColorPickerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorPickerNavigationController.h; sourceTree = "<group>"; };
+		D16EF71C18905F3500271AF5 /* InfColorPickerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorPickerNavigationController.m; sourceTree = "<group>"; };
+		D16EF71D18905F3500271AF5 /* InfColorPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfColorPickerView.xib; sourceTree = "<group>"; };
+		D16EF71E18905F3500271AF5 /* InfColorSquarePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfColorSquarePicker.h; sourceTree = "<group>"; };
+		D16EF71F18905F3500271AF5 /* InfColorSquarePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfColorSquarePicker.m; sourceTree = "<group>"; };
+		D16EF72018905F3500271AF5 /* InfHSBSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfHSBSupport.h; sourceTree = "<group>"; };
+		D16EF72118905F3500271AF5 /* InfHSBSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfHSBSupport.m; sourceTree = "<group>"; };
+		D16EF72218905F3500271AF5 /* InfSourceColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfSourceColorView.h; sourceTree = "<group>"; };
+		D16EF72318905F3500271AF5 /* InfSourceColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfSourceColorView.m; sourceTree = "<group>"; };
+		D16EF72C18906A1000271AF5 /* Palette@1.5x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Palette@1.5x.png"; sourceTree = "<group>"; };
 		D17BAF4418899ABA00108BD8 /* Freehand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freehand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17BAF4718899ABA00108BD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D17BAF4918899ABA00108BD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +162,22 @@
 		D17BAF4D18899ABA00108BD8 /* CavuSketch */ = {
 			isa = PBXGroup;
 			children = (
+				D16EF71418905F3500271AF5 /* InfColorBarPicker.h */,
+				D16EF71518905F3500271AF5 /* InfColorBarPicker.m */,
+				D16EF71618905F3500271AF5 /* InfColorIndicatorView.h */,
+				D16EF71718905F3500271AF5 /* InfColorIndicatorView.m */,
+				D16EF71818905F3500271AF5 /* InfColorPicker.h */,
+				D16EF71918905F3500271AF5 /* InfColorPickerController.h */,
+				D16EF71A18905F3500271AF5 /* InfColorPickerController.m */,
+				D16EF71B18905F3500271AF5 /* InfColorPickerNavigationController.h */,
+				D16EF71C18905F3500271AF5 /* InfColorPickerNavigationController.m */,
+				D16EF71D18905F3500271AF5 /* InfColorPickerView.xib */,
+				D16EF71E18905F3500271AF5 /* InfColorSquarePicker.h */,
+				D16EF71F18905F3500271AF5 /* InfColorSquarePicker.m */,
+				D16EF72018905F3500271AF5 /* InfHSBSupport.h */,
+				D16EF72118905F3500271AF5 /* InfHSBSupport.m */,
+				D16EF72218905F3500271AF5 /* InfSourceColorView.h */,
+				D16EF72318905F3500271AF5 /* InfSourceColorView.m */,
 				D17BAF5618899ABA00108BD8 /* AppDelegate.h */,
 				D17BAF5718899ABA00108BD8 /* AppDelegate.m */,
 				D17BAF5F18899ABA00108BD8 /* MainStoryboard_iPhone.storyboard */,
@@ -152,6 +194,7 @@
 		D17BAF4E18899ABA00108BD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D16EF72C18906A1000271AF5 /* Palette@1.5x.png */,
 				D15C303F18905AFD00C34927 /* Palette.png */,
 				9B7F8435188DEDC60087D561 /* Upload.png */,
 				D17BAF4F18899ABA00108BD8 /* Freehand-Info.plist */,
@@ -262,7 +305,9 @@
 			files = (
 				D17BAF5218899ABA00108BD8 /* InfoPlist.strings in Resources */,
 				D17BAF5A18899ABA00108BD8 /* Default.png in Resources */,
+				D16EF72818905F3500271AF5 /* InfColorPickerView.xib in Resources */,
 				D17BAF5C18899ABA00108BD8 /* Default@2x.png in Resources */,
+				D16EF72D18906A1000271AF5 /* Palette@1.5x.png in Resources */,
 				D17BAF5E18899ABA00108BD8 /* Default-568h@2x.png in Resources */,
 				D17BAF6118899ABA00108BD8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D15C304018905AFD00C34927 /* Palette.png in Resources */,
@@ -302,9 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16EF72518905F3500271AF5 /* InfColorIndicatorView.m in Sources */,
 				D17BAF5418899ABA00108BD8 /* main.m in Sources */,
 				D17BAF5818899ABA00108BD8 /* AppDelegate.m in Sources */,
 				D17BAF6718899ABA00108BD8 /* ViewController.m in Sources */,
+				D16EF72918905F3500271AF5 /* InfColorSquarePicker.m in Sources */,
+				D16EF72A18905F3500271AF5 /* InfHSBSupport.m in Sources */,
+				D16EF72B18905F3500271AF5 /* InfSourceColorView.m in Sources */,
+				D16EF72418905F3500271AF5 /* InfColorBarPicker.m in Sources */,
+				D16EF72718905F3500271AF5 /* InfColorPickerNavigationController.m in Sources */,
+				D16EF72618905F3500271AF5 /* InfColorPickerController.m in Sources */,
 				D1A5CACE1889B8870072A08E /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

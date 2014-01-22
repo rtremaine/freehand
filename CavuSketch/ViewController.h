@@ -19,16 +19,13 @@
     BOOL mouseSwiped;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *blackButton;
-@property (weak, nonatomic) IBOutlet UIButton *redButton;
-@property (weak, nonatomic) IBOutlet UIButton *eraseButton;
-
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 @property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *paletteButton;
+@property (nonatomic) UIColor* color;
 
-- (IBAction)pencilPressed:(id)sender;
-- (IBAction)eraserPressed:(id)sender;
 - (IBAction)reset:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)changeColor:(id)sender;
 
 @end
