@@ -40,17 +40,19 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-2u-BOg">
-                                <rect key="frame" x="118" y="531" width="85" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="Palette.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeColor:" destination="2" eventType="touchUpInside" id="lBP-6Y-5cx"/>
-                                </connections>
-                            </button>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-3Y-8cF">
+                                <rect key="frame" x="0.0" y="522" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ut1-4L-Z5H"/>
+                                    <barButtonItem image="Palette.png" id="QEQ-MB-d1F">
+                                        <connections>
+                                            <action selector="changeColor:" destination="2" id="5oe-EH-Nwv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="euf-2u-FBP"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,6 +69,9 @@
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="sPD-GV-fKU"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mainImage" destination="dIy-6Y-B7o" id="zLA-yz-PL9"/>
                         <outlet property="tempDrawImage" destination="OWl-4k-pwu" id="T5o-pi-NSO"/>
