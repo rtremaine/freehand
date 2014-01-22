@@ -44,14 +44,14 @@
 		9B7F8433188C851C0087D561 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9B7F8435188DEDC60087D561 /* Upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Upload.png; sourceTree = "<group>"; };
 		9BACD4A7188B201900154156 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		D17BAF4418899ABA00108BD8 /* CavuSketch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CavuSketch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17BAF4418899ABA00108BD8 /* Freehand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freehand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17BAF4718899ABA00108BD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D17BAF4918899ABA00108BD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D17BAF4B18899ABA00108BD8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D17BAF4F18899ABA00108BD8 /* CavuSketch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CavuSketch-Info.plist"; sourceTree = "<group>"; };
+		D17BAF4F18899ABA00108BD8 /* Freehand-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freehand-Info.plist"; sourceTree = "<group>"; };
 		D17BAF5118899ABA00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D17BAF5318899ABA00108BD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D17BAF5518899ABA00108BD8 /* CavuSketch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CavuSketch-Prefix.pch"; sourceTree = "<group>"; };
+		D17BAF5518899ABA00108BD8 /* Freehand-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Freehand-Prefix.pch"; sourceTree = "<group>"; };
 		D17BAF5618899ABA00108BD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D17BAF5718899ABA00108BD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D17BAF5918899ABA00108BD8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		D17BAF6318899ABA00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D17BAF6518899ABA00108BD8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D17BAF6618899ABA00108BD8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CavuSketchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17BAF6D18899ABB00108BD8 /* FreehandTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreehandTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17BAF6E18899ABB00108BD8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D17BAF7618899ABB00108BD8 /* CavuSketchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CavuSketchTests-Info.plist"; sourceTree = "<group>"; };
+		D17BAF7618899ABB00108BD8 /* FreehandTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreehandTests-Info.plist"; sourceTree = "<group>"; };
 		D17BAF7818899ABB00108BD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D17BAF7A18899ABB00108BD8 /* CavuSketchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CavuSketchTests.h; sourceTree = "<group>"; };
 		D17BAF7B18899ABB00108BD8 /* CavuSketchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CavuSketchTests.m; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		D17BAF4518899ABA00108BD8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D17BAF4418899ABA00108BD8 /* CavuSketch.app */,
-				D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */,
+				D17BAF4418899ABA00108BD8 /* Freehand.app */,
+				D17BAF6D18899ABB00108BD8 /* FreehandTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				9B7F8435188DEDC60087D561 /* Upload.png */,
-				D17BAF4F18899ABA00108BD8 /* CavuSketch-Info.plist */,
+				D17BAF4F18899ABA00108BD8 /* Freehand-Info.plist */,
 				D17BAF5018899ABA00108BD8 /* InfoPlist.strings */,
 				D17BAF5318899ABA00108BD8 /* main.m */,
-				D17BAF5518899ABA00108BD8 /* CavuSketch-Prefix.pch */,
+				D17BAF5518899ABA00108BD8 /* Freehand-Prefix.pch */,
 				D17BAF5918899ABA00108BD8 /* Default.png */,
 				D17BAF5B18899ABA00108BD8 /* Default@2x.png */,
 				D17BAF5D18899ABA00108BD8 /* Default-568h@2x.png */,
@@ -175,7 +175,7 @@
 		D17BAF7518899ABB00108BD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D17BAF7618899ABB00108BD8 /* CavuSketchTests-Info.plist */,
+				D17BAF7618899ABB00108BD8 /* FreehandTests-Info.plist */,
 				D17BAF7718899ABB00108BD8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -184,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D17BAF4318899ABA00108BD8 /* CavuSketch */ = {
+		D17BAF4318899ABA00108BD8 /* Freehand */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketch" */;
+			buildConfigurationList = D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "Freehand" */;
 			buildPhases = (
 				D17BAF4018899ABA00108BD8 /* Sources */,
 				D17BAF4118899ABA00108BD8 /* Frameworks */,
@@ -196,14 +196,14 @@
 			);
 			dependencies = (
 			);
-			name = CavuSketch;
+			name = Freehand;
 			productName = CavuSketch;
-			productReference = D17BAF4418899ABA00108BD8 /* CavuSketch.app */;
+			productReference = D17BAF4418899ABA00108BD8 /* Freehand.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D17BAF6C18899ABB00108BD8 /* CavuSketchTests */ = {
+		D17BAF6C18899ABB00108BD8 /* FreehandTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketchTests" */;
+			buildConfigurationList = D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "FreehandTests" */;
 			buildPhases = (
 				D17BAF6818899ABB00108BD8 /* Sources */,
 				D17BAF6918899ABB00108BD8 /* Frameworks */,
@@ -215,9 +215,9 @@
 			dependencies = (
 				D17BAF7318899ABB00108BD8 /* PBXTargetDependency */,
 			);
-			name = CavuSketchTests;
+			name = FreehandTests;
 			productName = CavuSketchTests;
-			productReference = D17BAF6D18899ABB00108BD8 /* CavuSketchTests.octest */;
+			productReference = D17BAF6D18899ABB00108BD8 /* FreehandTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -234,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "CavuSketch" */;
+			buildConfigurationList = D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "Freehand" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,8 +246,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D17BAF4318899ABA00108BD8 /* CavuSketch */,
-				D17BAF6C18899ABB00108BD8 /* CavuSketchTests */,
+				D17BAF4318899ABA00108BD8 /* Freehand */,
+				D17BAF6C18899ABB00108BD8 /* FreehandTests */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +318,7 @@
 /* Begin PBXTargetDependency section */
 		D17BAF7318899ABB00108BD8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D17BAF4318899ABA00108BD8 /* CavuSketch */;
+			target = D17BAF4318899ABA00108BD8 /* Freehand */;
 			targetProxy = D17BAF7218899ABB00108BD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,9 +423,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
-				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CavuSketch/Freehand-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketch/Freehand-Info.plist";
+				PRODUCT_NAME = Freehand;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,9 +437,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
-				INFOPLIST_FILE = "CavuSketch/CavuSketch-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "CavuSketch/Freehand-Prefix.pch";
+				INFOPLIST_FILE = "CavuSketch/Freehand-Info.plist";
+				PRODUCT_NAME = Freehand;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,8 +455,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
-				INFOPLIST_FILE = "CavuSketchTests/CavuSketchTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CavuSketchTests/FreehandTests-Info.plist";
+				PRODUCT_NAME = FreehandTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -472,8 +472,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CavuSketch/CavuSketch-Prefix.pch";
-				INFOPLIST_FILE = "CavuSketchTests/CavuSketchTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CavuSketchTests/FreehandTests-Info.plist";
+				PRODUCT_NAME = FreehandTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -482,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "CavuSketch" */ = {
+		D17BAF3F18899ABA00108BD8 /* Build configuration list for PBXProject "Freehand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D17BAF7D18899ABB00108BD8 /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketch" */ = {
+		D17BAF7F18899ABB00108BD8 /* Build configuration list for PBXNativeTarget "Freehand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D17BAF8018899ABB00108BD8 /* Debug */,
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "CavuSketchTests" */ = {
+		D17BAF8218899ABB00108BD8 /* Build configuration list for PBXNativeTarget "FreehandTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D17BAF8318899ABB00108BD8 /* Debug */,

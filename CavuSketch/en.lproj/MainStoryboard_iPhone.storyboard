@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -30,27 +30,13 @@
                                     <constraint firstAttribute="width" constant="44" id="EXc-8P-eZv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="B">
+                                <state key="normal">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pencilPressed:" destination="2" eventType="touchUpInside" id="ez9-6Z-Agu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vab-Ss-tJW">
-                                <rect key="frame" x="59" y="531" width="44" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="LgV-iI-PwX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="R">
-                                    <color key="titleColor" red="1" green="0.15062450261057192" blue="0.083692067844172047" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pencilPressed:" destination="2" eventType="touchUpInside" id="U73-g8-m3D"/>
+                                    <segue destination="nHk-kK-ihD" kind="modal" id="TBG-lj-Osx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-GV-AWq">
@@ -73,12 +59,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WYD-T5-BOk"/>
-                                    <barButtonItem title="Settings" id="bPP-mI-EA4">
-                                        <connections>
-                                            <segue destination="nHk-kK-ihD" kind="modal" id="Svf-55-r6V"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Cpl-pD-rxD"/>
                                     <barButtonItem image="Upload.png" id="axm-nB-0Rn">
                                         <connections>
                                             <action selector="save:" destination="2" id="a7R-Qp-qwF"/>
@@ -90,13 +70,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TgM-WW-QFq" secondAttribute="trailing" constant="1" id="1t6-4Z-Q5U"/>
-                            <constraint firstItem="vab-Ss-tJW" firstAttribute="baseline" secondItem="fEA-C2-zqv" secondAttribute="baseline" id="79e-YR-57z"/>
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="AXk-U6-Fcc"/>
-                            <constraint firstItem="vab-Ss-tJW" firstAttribute="leading" secondItem="fEA-C2-zqv" secondAttribute="trailing" constant="8" symbolic="YES" id="GNI-CZ-DNY"/>
+                            <constraint firstItem="fEA-C2-zqv" firstAttribute="centerY" secondItem="x4n-GV-AWq" secondAttribute="centerY" id="Gy9-oR-c6f"/>
                             <constraint firstAttribute="bottom" secondItem="fEA-C2-zqv" secondAttribute="bottom" constant="10" id="Hpc-pN-eKR"/>
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="HvJ-II-7r5"/>
                             <constraint firstItem="TgM-WW-QFq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="1" id="JrE-lj-ilp"/>
-                            <constraint firstItem="x4n-GV-AWq" firstAttribute="baseline" secondItem="vab-Ss-tJW" secondAttribute="baseline" id="MZv-LU-U9l"/>
                             <constraint firstItem="dIy-6Y-B7o" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="MjV-9Y-mGw"/>
                             <constraint firstItem="OWl-4k-pwu" firstAttribute="top" secondItem="3" secondAttribute="top" id="Mzr-e7-OZu"/>
                             <constraint firstItem="fEA-C2-zqv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="Wyo-Tp-zmR"/>
@@ -112,7 +90,6 @@
                         <outlet property="blackButton" destination="fEA-C2-zqv" id="qHR-eU-BQD"/>
                         <outlet property="eraseButton" destination="x4n-GV-AWq" id="9b6-Cb-Eqb"/>
                         <outlet property="mainImage" destination="dIy-6Y-B7o" id="zLA-yz-PL9"/>
-                        <outlet property="redButton" destination="vab-Ss-tJW" id="c8o-P6-fDb"/>
                         <outlet property="tempDrawImage" destination="OWl-4k-pwu" id="T5o-pi-NSO"/>
                     </connections>
                 </viewController>

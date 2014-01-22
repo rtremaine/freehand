@@ -20,7 +20,7 @@
 @synthesize tempDrawImage;
 
 @synthesize blackButton;
-@synthesize redButton;
+//@synthesize redButton;
 @synthesize eraseButton;
 
 - (void)viewDidLoad
@@ -122,7 +122,7 @@
 
 - (void) disableActionButtons {
     [self toggleButton:blackButton enabled:false];
-    [self toggleButton:redButton enabled:false];
+    //[self toggleButton:redButton enabled:false];
     [self toggleButton:eraseButton enabled:false];
 }
 
