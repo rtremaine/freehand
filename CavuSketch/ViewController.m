@@ -130,11 +130,11 @@
                      enabled:(BOOL)enable {
     if (enable) {
         //btn.selected = true;
-        btn.layer.borderColor = [UIColor blackColor].CGColor;
+        btn.layer.borderColor = [UIColor blueColor].CGColor;
         btn.layer.borderWidth = 1;
     } else {
         //btn.selected = false;
-        btn.layer.borderColor = [UIColor blackColor].CGColor;
+        btn.layer.borderColor = [UIColor blueColor].CGColor;
         btn.layer.borderWidth = 0;
     }
 }
