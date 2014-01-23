@@ -88,6 +88,7 @@
 - (IBAction)changeColor:(id)sender {
     InfColorPickerController* picker = [ InfColorPickerController colorPickerViewController ];
     picker.sourceColor = color;
+    picker.brush = brush;
     picker.delegate = self;
     //paletteButton.tintColor = color;
     
@@ -104,6 +105,8 @@
     green = _components[1];
     blue   = _components[2];
     //CGFloat calpha = _components[3];
+    
+    brush = picker.brush;
     
     [ self dismissModalViewControllerAnimated: YES ];
 }

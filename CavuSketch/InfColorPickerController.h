@@ -27,8 +27,12 @@
 
 @property (nonatomic) UIColor* sourceColor;
 @property (nonatomic) UIColor* resultColor;
+@property (weak, nonatomic) IBOutlet UISlider *brushControl;
+@property (weak, nonatomic) IBOutlet UIImageView *brushPreview;
+@property CGFloat brush;
 
 @property (weak, nonatomic) id <InfColorPickerControllerDelegate> delegate;
+- (IBAction)sliderChanged:(id)sender;
 
 @end
 

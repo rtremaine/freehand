@@ -54,19 +54,26 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 @property (nonatomic) IBOutlet InfColorSquareView* squareView;
 @property (nonatomic) IBOutlet InfColorBarPicker* barPicker;
 @property (nonatomic) IBOutlet InfColorSquarePicker* squarePicker;
-@property (nonatomic) IBOutlet UIView* sourceColorView;
-@property (nonatomic) IBOutlet UIView* resultColorView;
+//@property (nonatomic) IBOutlet UIView* sourceColorView;
+//@property (nonatomic) IBOutlet UIView* resultColorView;
 @property (nonatomic) IBOutlet UINavigationController* navController;
 
 @end
 
 //==============================================================================
-
 @implementation InfColorPickerController {
+    
 	float _hue;
 	float _saturation;
 	float _brightness;
+    float _red;
+    float _green;
+    float _blue;
+    //float _brush;
 }
+
+@synthesize brush;
+@synthesize brushControl;
 
 //------------------------------------------------------------------------------
 #pragma mark	Class methods
@@ -130,11 +137,13 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	_squarePicker.hue = _hue;
 	_squarePicker.value = CGPointMake(_saturation, _brightness);
 	
-	if (_sourceColor)
-		_sourceColorView.backgroundColor = _sourceColor;
+	//if (_sourceColor)
+	//	_sourceColorView.backgroundColor = _sourceColor;
 	
-	if (_resultColor)
-		_resultColorView.backgroundColor = _resultColor;
+	//if (_resultColor)
+	//	_resultColorView.backgroundColor = _resultColor;
+    
+    [self sliderChanged:brushControl];
 }
 
 //------------------------------------------------------------------------------
@@ -187,10 +196,10 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 //------------------------------------------------------------------------------
 
-- (IBAction) takeBackgroundColor: (UIView*) sender
-{
-	self.resultColor = sender.backgroundColor;
-}
+//- (IBAction) takeBackgroundColor: (UIView*) sender
+//{
+//	self.resultColor = sender.backgroundColor;
+//}
 
 //------------------------------------------------------------------------------
 
@@ -223,10 +232,18 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 							  saturation: _saturation
 							  brightness: _brightness
 								   alpha: 1.0f];
+    
+    CGColorRef colorRef = [_resultColor CGColor];
+    const CGFloat *_components = CGColorGetComponents(colorRef);
+    _red     = _components[0];
+    _green = _components[1];
+    _blue   = _components[2];
+    
+    [self sliderChanged:brushControl];
 	
 	[self didChangeValueForKey: @"resultColor"];
 	
-	_resultColorView.backgroundColor = _resultColor;
+	//_resultColorView.backgroundColor = _resultColor;
 	
 	[self informDelegateDidChangeColor];
 }
@@ -254,7 +271,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 		
 		_squarePicker.value = CGPointMake(_saturation, _brightness);
 		
-		_resultColorView.backgroundColor = _resultColor;
+		//_resultColorView.backgroundColor = _resultColor;
 		
 		[self informDelegateDidChangeColor];
 	}
@@ -267,7 +284,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	if (![_sourceColor isEqual: newValue]) {
 		_sourceColor = newValue;
 		
-		_sourceColorView.backgroundColor = _sourceColor;
+		//_sourceColorView.backgroundColor = _sourceColor;
 		
 		self.resultColor = newValue;
 	}
@@ -284,6 +301,28 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 //------------------------------------------------------------------------------
 
+- (IBAction)sliderChanged:(id)sender {
+    UISlider * changedSlider = (UISlider*)sender;
+    
+    if(changedSlider == self.brushControl) {
+        
+        self.brush = self.brushControl.value;
+        //self.brushValueLabel.text = [NSString stringWithFormat:@"%.1f", self.brush];
+        
+        UIGraphicsBeginImageContext(self.brushPreview.frame.size);
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.brush);
+        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), 0.0, 0.0, 0.0, 1.0);
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(),45, 45);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(),45, 45);
+        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), _red, _green, _blue, 1.0);
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        self.brushPreview.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+    }
+
+}
 @end
 
 //==============================================================================
