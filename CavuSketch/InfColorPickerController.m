@@ -17,13 +17,9 @@
 #import "InfColorPickerNavigationController.h"
 #import "InfHSBSupport.h"
 
-//------------------------------------------------------------------------------
-
 #if !__has_feature(objc_arc)
 #error This file must be compiled with ARC enabled (-fobjc-arc).
 #endif
-
-//------------------------------------------------------------------------------
 
 static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 {
@@ -46,8 +42,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	RGBToHSV(r, g, b, h, s, v, YES);
 }
 
-//==============================================================================
-
 @interface InfColorPickerController ()
 
 @property (nonatomic) IBOutlet InfColorBarView* barView;
@@ -58,7 +52,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 @end
 
-//==============================================================================
 @implementation InfColorPickerController {
     
 	float _hue;
@@ -72,25 +65,15 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 @synthesize brush;
 @synthesize brushControl;
 
-//------------------------------------------------------------------------------
-#pragma mark	Class methods
-//------------------------------------------------------------------------------
-
 + (InfColorPickerController*) colorPickerViewController
 {
 	return [[self alloc] initWithNibName: @"InfColorPickerView" bundle: nil];
 }
 
-//------------------------------------------------------------------------------
-
 + (CGSize) idealSizeForViewInPopover
 {
 	return CGSizeMake(256 + (1 + 20) * 2, 420);
 }
-
-//------------------------------------------------------------------------------
-#pragma mark	Creation
-//------------------------------------------------------------------------------
 
 - (id) initWithNibName: (NSString*) nibNameOrNil bundle: (NSBundle*) nibBundleOrNil
 {
@@ -104,8 +87,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	return self;
 }
 
-//------------------------------------------------------------------------------
-
 - (void) presentModallyOverViewController: (UIViewController*) controller
 {
 	UINavigationController* nav = [[InfColorPickerNavigationController alloc] initWithRootViewController: self];
@@ -118,10 +99,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	
 	[controller presentViewController: nav animated: YES completion: nil];
 }
-
-//------------------------------------------------------------------------------
-#pragma mark	UIViewController methods
-//------------------------------------------------------------------------------
 
 - (void) viewDidLoad
 {
@@ -140,14 +117,10 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
     [self sliderChanged:brushControl];
 }
 
-//------------------------------------------------------------------------------
-
 - (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) interfaceOrientation
 {
 	return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
-
-//------------------------------------------------------------------------------
 
 - (NSUInteger) supportedInterfaceOrientations
 {
@@ -157,16 +130,10 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 		return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
-//------------------------------------------------------------------------------
-
 - (UIRectEdge) edgesForExtendedLayout
 {
 	return UIRectEdgeNone;
 }
-
-//------------------------------------------------------------------------------
-#pragma mark	IB actions
-//------------------------------------------------------------------------------
 
 - (IBAction) takeBarValue: (InfColorBarPicker*) sender
 {
@@ -178,8 +145,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	[self updateResultColor];
 }
 
-//------------------------------------------------------------------------------
-
 - (IBAction) takeSquareValue: (InfColorSquarePicker*) sender
 {
 	_saturation = sender.value.x;
@@ -188,24 +153,16 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	[self updateResultColor];
 }
 
-//------------------------------------------------------------------------------
-
 - (IBAction) done: (id) sender
 {
 	[self.delegate colorPickerControllerDidFinish: self];
 }
-
-//------------------------------------------------------------------------------
-#pragma mark	Properties
-//------------------------------------------------------------------------------
 
 - (void) informDelegateDidChangeColor
 {
 	if (self.delegate && [(id) self.delegate respondsToSelector: @selector(colorPickerControllerDidChangeColor:)])
 		[self.delegate colorPickerControllerDidChangeColor: self];
 }
-
-//------------------------------------------------------------------------------
 
 - (void) updateResultColor
 {
@@ -228,8 +185,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	
 	[self informDelegateDidChangeColor];
 }
-
-//------------------------------------------------------------------------------
 
 - (void) setResultColor: (UIColor*) newValue
 {
@@ -266,8 +221,6 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
     _blue   = _components[2];
 }
 
-//------------------------------------------------------------------------------
-
 - (void) setSourceColor: (UIColor*) newValue
 {
 	if (![_sourceColor isEqual: newValue]) {
@@ -277,16 +230,10 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 	}
 }
 
-//------------------------------------------------------------------------------
-#pragma mark	UIViewController(UIPopoverController) methods
-//------------------------------------------------------------------------------
-
 - (CGSize) contentSizeForViewInPopover
 {
 	return [[self class] idealSizeForViewInPopover];
 }
-
-//------------------------------------------------------------------------------
 
 - (IBAction)sliderChanged:(id)sender {
     UISlider * changedSlider = (UISlider*)sender;
@@ -296,9 +243,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
         brush = brushControl.value;
         
         [self updateBrushPreview];
-        
     }
-
 }
 
 - (void)updateBrushPreview {
@@ -314,5 +259,3 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
     UIGraphicsEndImageContext();
 }
 @end
-
-//==============================================================================
