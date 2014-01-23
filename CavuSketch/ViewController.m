@@ -54,19 +54,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) toggleButton:(UIButton *)btn
-                     enabled:(BOOL)enable {
-    if (enable) {
-        //btn.selected = true;
-        btn.layer.borderColor = [UIColor blueColor].CGColor;
-        btn.layer.borderWidth = 1;
-    } else {
-        //btn.selected = false;
-        btn.layer.borderColor = [UIColor blueColor].CGColor;
-        btn.layer.borderWidth = 0;
-    }
-}
-
 - (IBAction)reset:(id)sender {
     self.mainImage.image = nil;
 }
@@ -90,7 +77,6 @@
     picker.sourceColor = color;
     picker.brush = brush;
     picker.delegate = self;
-    //paletteButton.tintColor = color;
     
     [ picker presentModallyOverViewController: self ];
 }
