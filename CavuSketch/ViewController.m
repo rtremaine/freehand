@@ -27,9 +27,9 @@
     red = 0.0/255.0;
     green = 0.0/255.0;
     blue = 0.0/255.0;
-    brush = 7.0;
+    brush = 4.0;
     opacity = 1.0;
-    color = [UIColor blackColor];
+    color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

@@ -45,7 +45,6 @@
                             </accessibility>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" hint="Sets the saturation and brightness of the color." label="Color square">
                         <bool key="isElement" value="YES"/>
                     </accessibility>
@@ -74,7 +73,6 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" hint="Sets the hue of the color." label="Color bar">
                         <bool key="isElement" value="YES"/>
                     </accessibility>

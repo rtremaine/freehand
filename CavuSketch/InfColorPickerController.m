@@ -220,11 +220,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 							  brightness: _brightness
 								   alpha: 1.0f];
     
-    CGColorRef colorRef = [_resultColor CGColor];
-    const CGFloat *_components = CGColorGetComponents(colorRef);
-    _red     = _components[0];
-    _green = _components[1];
-    _blue   = _components[2];
+    [self setRGB];
 	
 	[self didChangeValueForKey: @"resultColor"];
     
@@ -239,6 +235,8 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 {
 	if (![_resultColor isEqual: newValue]) {
 		_resultColor = newValue;
+        
+        [self setRGB];
 		
 		float h = _hue;
 		HSVFromUIColor(newValue, &h, &_saturation, &_brightness);
@@ -258,6 +256,14 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 		
 		[self informDelegateDidChangeColor];
 	}
+}
+
+- (void) setRGB {
+    CGColorRef colorRef = [_resultColor CGColor];
+    const CGFloat *_components = CGColorGetComponents(colorRef);
+    _red     = _components[0];
+    _green = _components[1];
+    _blue   = _components[2];
 }
 
 //------------------------------------------------------------------------------
