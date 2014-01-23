@@ -93,6 +93,8 @@
     //CGFloat calpha = _components[3];
     
     brush = picker.brush;
+    //paletteButton.tintColor = color;
+    //paletteButton.tintColor = [UIColor blackColor];
     
     [ self dismissModalViewControllerAnimated: YES ];
 }

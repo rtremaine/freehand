@@ -110,7 +110,7 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 {
 	UINavigationController* nav = [[InfColorPickerNavigationController alloc] initWithRootViewController: self];
 	
-	nav.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	nav.navigationBar.barStyle = UIBarStyleDefault;// UIBarStyleBlackOpaque;
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone
 																						   target: self
